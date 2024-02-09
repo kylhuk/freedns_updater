@@ -8,8 +8,8 @@ if [ -e "$JOB_FILE" ]; then
 fi
 
 if [ -z "$HOURS_DELAY" ]; then
-    echo "HOURS_DELAY not set, defaulting to 6 hours."
-    HOURS_DELAY="*/6"
+    echo "HOURS_DELAY not set, defaulting to 1 hour."
+    HOURS_DELAY="*/1"
 elif (( HOURS_DELAY < 24 )) && (( HOURS_DELAY > 0 )); then
     echo "Adding job to run every ${HOURS_DELAY} hours."
     HOURS_DELAY="*/${HOURS_DELAY}"

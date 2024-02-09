@@ -2,8 +2,8 @@ version: '3.4'
 services:
   freedns_updator:
     container_name: freedns_updater
-    image: notquitenothing/freedns_updater:latest
-    restart: on-failure:1
+    image: wenga/freedns_updater:latest
+    restart: unless-stopped
     environment:
       TOKENS: "randomizedToken1; randomizedToken2; ..." #provided by the afraid.org version 2 dynamic update interface
-      HOURS_DELAY: "12" #optional, defaults to 6 hours between updates
+      HOURS_DELAY: "1" #optional, defaults to 1 hours between updates
